@@ -47,8 +47,10 @@ def custom_append(input_list, value):
         True
 
     """
+    
+    notes[:] = [value]
+    notes[:-2] = input_list
 
-    pass
 
 
 def custom_extend(input_list, second_list):
@@ -67,7 +69,14 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    length = 0
+
+    for i in input_list:
+        length += 1
+
+    months[:] = input_list
+    months[length:] = second_list
+    
 
 
 def custom_insert(input_list, index, value):
